@@ -42,7 +42,7 @@ app.post('/api/v1/login', (req, res) => {
     let users = db.get('users').value();
 
     let validUser = users.filter(res => {
-       return res.username === req.body.username && res.password === req.body.password
+        return res.username === req.body.username && res.password === req.body.password
     })
     if(validUser.length){
         return res.status(200).send({
@@ -74,7 +74,7 @@ app.post('/api/v1/register', (req, res) => {
     let users = db.get('users').value();
 
     let validUser = users.filter(res => {
-       return res.username === req.body.username
+        return res.username === req.body.username
     });
 
     if(!validUser.length){
