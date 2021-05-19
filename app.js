@@ -1,8 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser'
+const cors = require('cors');
+
 
 const app = express();
-
+app.use(cors());
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 
